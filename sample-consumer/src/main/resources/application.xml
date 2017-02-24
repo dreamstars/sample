@@ -19,9 +19,9 @@
 
 	<bean id="mysql1" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/inst01" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/tcc_02" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="root" />
 		<property name="maxActive" value="50" />
 		<property name="initialSize" value="20" />
 		<property name="maxWait" value="60000" />
@@ -47,9 +47,9 @@
 
 	<bean id="mysql2" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://127.0.0.1:3306/inst02" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/tcc_02" />
 		<property name="username" value="root" />
-		<property name="password" value="123456" />
+		<property name="password" value="root" />
 		<property name="maxActive" value="50" />
 		<property name="initialSize" value="20" />
 		<property name="maxWait" value="60000" />

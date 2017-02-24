@@ -29,6 +29,20 @@ public class MultiDsTransferServiceImpl implements ITransferService {
 		// throw new ServiceException("rollback");
 	}
 
+	/**
+	 * 可补偿型服务的Try/Confirm/Cancel实现类的方法必须定义Transactional注解，且propagation必须是Required, RequiresNew, Mandatory
+	 * 中的一种（即业务代码必须参与事务，从0.3.0开始强制要求）；
+	 *
+	 * @param sourceAcctId
+	 * @param targetAcctId
+	 * @param amount
+	 * @throws ServiceException
+     */
+	@Transactional(rollbackFor = ServiceException.class)
+	public void transfer2(String sourceAcctId, String targetAcctId, double amount) throws ServiceException {
+
+	}
+
 	private void increaseAmount(String acctId, double amount) throws ServiceException {
 		int value = this.jdbcTemplate.update("update tb_account_two set amount = amount + ? where acct_id = ?", amount, acctId);
 		if (value != 1) {

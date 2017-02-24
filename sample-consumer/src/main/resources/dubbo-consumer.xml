@@ -12,7 +12,7 @@
 	<dubbo:provider timeout="15000" />
 	<dubbo:consumer check="false" timeout="15000" />
 	<dubbo:protocol name="dubbo" port="30881" />
-	<dubbo:registry address="localhost:2181" protocol="zookeeper" />
+	<dubbo:registry address="127.0.0.1:2181" protocol="zookeeper" />
 
 	<dubbo:reference id="remoteAccountService" interface="com.bytesvc.service.IAccountService" group="org.bytesoft.bytetcc"
 		filter="compensable" loadbalance="compensable" cluster="failfast" retries="0" />

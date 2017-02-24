@@ -16,7 +16,8 @@ public class GenericConsumerMain {
 
 		ITransferService transferSvc = (ITransferService) context.getBean("genericTransferService");
 		try {
-			transferSvc.transfer("1001", "2001", 1.00d);
+//			transferSvc.transfer("1001", "2001", 1.00d);
+			transferSvc.transfer2("1001", "1002", 1.00d);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {

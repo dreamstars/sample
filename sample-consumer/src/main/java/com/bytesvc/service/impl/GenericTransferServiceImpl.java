@@ -26,7 +26,19 @@ public class GenericTransferServiceImpl implements ITransferService {
 		this.remoteAccountService.decreaseAmount(sourceAcctId, amount);
 		this.increaseAmount(targetAcctId, amount);
 
-		// throw new ServiceException("rollback");
+		 throw new ServiceException("rollback");
+	}
+
+	@Transactional(rollbackFor = ServiceException.class)
+	public void transfer2(String sourceAcctId, String targetAcctId, double amount) throws ServiceException {
+		// 1001账户amount-1
+		this.remoteAccountService.decreaseAmount(sourceAcctId, amount);
+		// 1002账户amount+1
+		this.remoteAccountService.increaseAmount(targetAcctId, amount);
+
+		System.out.printf("rollback");
+
+//		throw new ServiceException("rollback");
 	}
 
 	private void increaseAmount(String acctId, double amount) throws ServiceException {

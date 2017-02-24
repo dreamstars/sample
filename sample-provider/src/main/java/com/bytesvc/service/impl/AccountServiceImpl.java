@@ -23,6 +23,7 @@ public class AccountServiceImpl implements IAccountService {
 			throw new ServiceException("ERROR!");
 		}
 		System.out.printf("exec increase: acct= %s, amount= %7.2f%n", acctId, amount);
+//		throw new ServiceException("rollback");
 	}
 
 	@Transactional(rollbackFor = ServiceException.class)
@@ -32,7 +33,7 @@ public class AccountServiceImpl implements IAccountService {
 			throw new ServiceException("ERROR!");
 		}
 		System.out.printf("exec decrease: acct= %s, amount= %7.2f%n", acctId, amount);
-		// throw new ServiceException("rollback");
+		 throw new ServiceException("rollback");
 	}
 
 }
