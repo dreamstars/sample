@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.bytesoft:bytejta-supports:0.3.0-RC4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bytesoft/bytejta-supports/0.3.0-RC4/bytejta-supports-0.3.0-RC4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bytesoft/bytejta-supports/0.3.0-RC4/bytejta-supports-0.3.0-RC4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/bytesoft/bytejta-supports/0.3.0-RC4/bytejta-supports-0.3.0-RC4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
